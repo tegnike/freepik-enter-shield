@@ -1,6 +1,6 @@
 # freepik-enter-shield
 
-Freepik の AI 画像生成ツール（https://jp.freepik.com/pikaso/ai-image-generator）で、日本語 IME の変換確定時に `Enter` キーが誤って送信トリガーとして扱われる問題を回避する Chrome 拡張機能です。
+Freepik の AI 画像生成ツール（ https://jp.freepik.com/pikaso/ai-image-generator ）で、日本語 IME の変換確定時に `Enter` キーが誤って送信トリガーとして扱われる問題を回避する Chrome 拡張機能です。
 
 ## 主な機能
 - `compositionstart` / `compositionend` を監視し、IME 変換中や変換直後の `Enter` キーイベントをキャンセルして誤送信を防止。
