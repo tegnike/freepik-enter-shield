@@ -1,12 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Freepik IME Enter Fix",
-  "version": "1.0.0",
-  "description": "Prevents unintended prompt submission on Freepik AI generator when confirming Japanese IME input.",
+  "name": "AI Generator IME Enter Fix",
+  "version": "1.1.0",
+  "description": "Prevents unintended prompt submission on AI image generators when confirming Japanese IME input.",
   "content_scripts": [
     {
       "matches": [
         "https://jp.freepik.com/pikaso/ai-image-generator*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://higgsfield.ai/*"
       ],
       "js": [
         "content-script.js"

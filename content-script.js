@@ -1,12 +1,19 @@
 (() => {
-  const INIT_FLAG = '__freepikImeEnterFixInitialized';
+  const INIT_FLAG = '__aiGeneratorImeEnterFixInitialized';
   if (window[INIT_FLAG]) {
     return;
   }
   window[INIT_FLAG] = true;
 
-  const PROMPT_SELECTOR = '[data-cy="tti-prompt-input"]';
-  const PROMPT_FALLBACK_SELECTOR = '.dynamic-prompt';
+  // Freepik selectors
+  const FREEPIK_PROMPT_SELECTOR = '[data-cy="tti-prompt-input"]';
+  const FREEPIK_FALLBACK_SELECTOR = '.dynamic-prompt';
+  // Higgsfield selectors
+  const HIGGSFIELD_PROMPT_SELECTOR = 'form.image-form textarea[name="prompt"]';
+  const HIGGSFIELD_FALLBACK_SELECTOR = 'textarea.reference-prompt';
+
+  const PROMPT_SELECTOR = `${FREEPIK_PROMPT_SELECTOR}, ${HIGGSFIELD_PROMPT_SELECTOR}`;
+  const PROMPT_FALLBACK_SELECTOR = `${FREEPIK_FALLBACK_SELECTOR}, ${HIGGSFIELD_FALLBACK_SELECTOR}`;
   const GRACE_PERIOD_MS = 80;
   const promptState = new WeakMap();
 

@@ -1,6 +1,12 @@
 # freepik-enter-shield
 
-Freepik の AI 画像生成ツール（ https://jp.freepik.com/pikaso/ai-image-generator ）で、日本語 IME の変換確定時に `Enter` キーが誤って送信トリガーとして扱われる問題を回避する Chrome 拡張機能です。
+Freepik の AI 画像生成ツール（ https://jp.freepik.com ）で、日本語 IME の変換確定時に `Enter` キーが誤って送信トリガーとして扱われる問題を回避する Chrome 拡張機能です。
+
+※ 追加で、Higgsfield の AI 画像生成ツール（ https://higgsfield.ai/ ）にも対応しました。
+
+## 対応サービス
+- [Freepik AI Image Generator](https://jp.freepik.com)
+- [Higgsfield](https://higgsfield.ai/)
 
 ## 主な機能
 - `compositionstart` / `compositionend` を監視し、IME 変換中や変換直後の `Enter` キーイベントをキャンセルして誤送信を防止。
@@ -16,7 +22,7 @@ Freepik の AI 画像生成ツール（ https://jp.freepik.com/pikaso/ai-image-g
 ## 導入手順
 1. Chrome で `chrome://extensions/` を開き、右上の「デベロッパーモード」をオンにします。
 2. 「パッケージ化されていない拡張機能を読み込む」をクリックし、このフォルダ（`freepik-enter-shield`）を選択します。
-3. `https://jp.freepik.com/pikaso/ai-image-generator` を開き直し、拡張が自動的に有効になることを確認します。
+3. 対応サービス（Freepik または Higgsfield）を開き直し、拡張が自動的に有効になることを確認します。
 
 ## 動作確認のポイント
 1. 日本語 IME を使用して入力フォームにテキストを入力。
